@@ -1,6 +1,6 @@
 {
-	"name": "pome-loader-upgrade",
-	"version": "0.0.1",
+	"name": "pome-loader",
+	"version": "0.0.2",
 	"dependencies": {
 	}, 
 	"devDependencies": {
