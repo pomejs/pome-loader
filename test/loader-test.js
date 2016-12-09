@@ -11,26 +11,24 @@ describe('loader', function() {
 		it('should load all modules under the path but sub-directory', function() {
 			var services = Loader.load(path);
 			should.exist(services);
-
 			services.should.have.property('addOneRemote');
-			services.addOneRemote.should.be.a('object');
+			services.addOneRemote.should.be.a.Object();
 			services.addOneRemote.should.have.property('doService');
-			services.addOneRemote.doService.should.be.a('function');
+			services.addOneRemote.doService.should.be.a.Function();
 			services.addOneRemote.should.have.property('doAddTwo');
-			services.addOneRemote.doService.should.be.a('function');
-
+			services.addOneRemote.doService.should.be.a.Function();
 			services.should.have.property('addThreeRemote');
-			services.addThreeRemote.should.be.a('object');
+			services.addThreeRemote.should.be.a.Object();
 			services.addThreeRemote.should.have.property('doService');
-			services.addThreeRemote.doService.should.be.a('function');
-
+			services.addThreeRemote.doService.should.be.a.Function();
+			
 			// should use the name as module name if the module has a name property
 			services.should.have.property('whoAmIRemote');
-			services.whoAmIRemote.should.be.a('object');
+			services.whoAmIRemote.should.be.a.Object();
 			services.whoAmIRemote.should.have.property('doService');
-			services.whoAmIRemote.doService.should.be.a('function');
+			services.whoAmIRemote.doService.should.be.a.Function();
 			services.whoAmIRemote.should.have.property('name');
-			services.whoAmIRemote.name.should.be.a('string');
+			services.whoAmIRemote.name.should.be.a.String();
 		});
 		
 		it('should invoke functions of loaded object successfully', function(done) {
